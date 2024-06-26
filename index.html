@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gülsüm Özcicek - TikTok Kanal</title>
+    <meta name="description" content="Gülsüm Özcicek's offizielle Website. Folgt ihr auf TikTok für Inhalte zu Studium, Beauty, Skincare und Fashion.">
+    <meta name="keywords" content="Gülsüm Özcicek, TikTok, Studium, Beauty, Skincare, Fashion, Hijabi">
+    <meta name="author" content="Gülsüm Özcicek">
+    <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); }
+            to { transform: translateY(0); }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E8DCCA; /* Braun-beige */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-image: url('path/to/your/white-pattern.png'); /* Pfad zum weißen Musterbild */
+            background-repeat: no-repeat;
+            background-position: left top, right top;
+            background-size: 50px 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+        header {
+            background-color: #f5f5f5; /* Weiß */
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            animation: slideIn 1s ease-in-out;
+        }
+        nav {
+            background-color: #fff; /* Weiß */
+            color: #333; /* Dunkle Schriftfarbe */
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #333; /* Optional: Linie unten */
+        }
+        nav a {
+            color: #333; /* Dunkle Schriftfarbe für Links */
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            color: #007BFF; /* Blau beim Hover */
+        }
+        .container {
+            padding: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+        .profile h1 {
+            color: #333;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item {
+            flex: 1 1 calc(25% - 20px);
+            margin: 10px;
+            max-width: calc(25% - 20px);
+            text-align: center; /* Zentriert den Text unter den Bildern */
+        }
+        .gallery-item a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #007BFF; /* Blau */
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        .gallery-item a:hover {
+            color: #0056b3; /* Dunkleres Blau beim Hover */
+        }
+        @media (max-width: 768px) {
+            .gallery-item {
+                flex: 1 1 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery-item {
+                flex: 1 1 calc(100% - 20px);
+                max-width: calc(100% - 20px);
+            }
+        }
+        .contact {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            opacity: 0;
+        }
+        .social-media {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .social-media a {
+            color: #333;
+            margin: 0 10px;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .social-media a:hover {
+            color: #007BFF; /* Blau */
+        }
+        footer {
+            background-color: #f5f5f5; /* Weiß */
+            color: #333;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            animation: slideIn 1s ease-in-out;
+        }
+        @media (max-width: 768px) {
+            .profile img {
+                width: 100px;
+                height: 100px;
+            }
+            nav a {
+                font-size: 16px;
+                margin: 0 10px;
+            }
+            .container {
+                padding: 10px;
+            }
+        }
+        .comments-section {
+            margin: 20px 0;
+        }
+        .comments-list {
+            margin: 20px 0;
+            padding: 0;
+            list-style: none;
+        }
+        .comments-list .comment {
+            position: relative;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .comments-list .comment .comment-name {
+            font-weight: bold;
+        }
+        .comments-list .comment .comment-text {
+            margin: 5px 0;
+        }
+        .like-dislike {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        .like-dislike button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .like-dislike button:hover {
+            color: #007BFF;
+        }
+        #comment-form {
+            display: flex;
+            flex-direction: column;
+        }
+        #comment-form label {
+            margin: 5px 0;
+        }
+        #comment-form input, #comment-form textarea {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #comment-form button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        #comment-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gülsüm aka gxlcicek</h1>
+        <p>Hellooo, das ist meine persönliche Website, die mir ChatGPT erstellt hat. Yuhuuuu!</p>
+    </header>
+    <nav aria-label="Hauptnavigation">
+        <a href="#about">Über mich</a>
+        <a href="#content">Inhalte</a>
+        <a href="#contact" onclick="showContact()">collab</a>
+    </nav>
+    <div class="container">
+        <div id="about" class="profile">
+            <img src="dein-foto.jpg" alt="Foto von Gülsüm Özcicek" loading="lazy">
+            <h1>Gülsüm</h1>
+            <p>Folge mir gerne auf TikTok: <strong>@gxlcicek</strong></p>
+        </div>
+        <div id="content" class="content">
+            <h2>Hi <3</h2>
+            <p>Ich bin Gülsüm (22). Ich studiere derzeit Wirtschaftsingenieurwesen im 6. Semester in Hannover an der LUH und nehme euch mit in mein Studentenleben Yuhuuuu</p>
+            <p>Auf meinem Account unter der Playlist "Studium" findet ihr beispielsweise Tipps zu eurer Bachelorarbeit, zum Programmieren in Python und C, aber auch allgemein meine Erfahrungen als WiIng-Studentin in einem männerdominierten Studiengang.</p>
+            <p>Abgesehen von meinem Studium lade ich auch gerne Inhalte zum Thema Make-Up und Skincare hoch, z.B. Hauls, Angebote und auch GRWM. Diese findet ihr unter der Playlist "Beauty".</p>
+            <p>Produkte, die ich gerne benutze, findet ihr unter "favs".</p>
+            <p>Outfits als Hijabi findet ihr unter "Fashion".</p>
+            <p>Falls es euch interessiert, lasst gerne ein Follow da und wir sehen uns dann täglich drei Mal auf eurer FY :). Ich freue mich auf eure Interaktion <3</p>
+            <p>Gruß <br>Gülsüm</p>
+        </div>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="WiingHaus.jpg" alt="Mein Studium Aktuell">
+                <a href="https://www.tiktok.com/@gxlcicek/video/7355214814332882208?is_from_webapp=1&sender_device=pc&web_id=7384785676745967136" target="_blank">Zum Video</a>
+            </div>
+            <div class="gallery-item">
+                <img src="BA.jpg" alt="Tipps für eure Bachelorarbeit">
+                <a href="https://vm.tiktok.com/ZGegSb1Nb/" target="_blank">Zum Video</a>
+            </div>
+            <div class="gallery-item">
+                <img src="Info.jpg" alt="Kurz vor der Informatik Klausur">
+                <a href="https://vm.tiktok.com/ZGegS7p2D/" target="_blank">Zum Video</a>
+            </div>
+            <div class="gallery-item">
+                <img src="ChatGPT.jpg" alt="ChatGPT 4.0 für BA">
+                <a href="https://vm.tiktok.com/ZGegSg39c/" target="_blank">Zum Video</a>
+            </div>
+            <div class="gallery-item">
+                <img src="whitener.jpg" alt="Empfehlung: Schuhreiniger">
+                <a href="https://vm.tiktok.com/ZGegSyNvX/" target="_blank">Zum Video</a>
+            </div>
+            <div class="gallery-item">
+                <img src="Enteiser.jpg" alt="Empfehlung: Enteiser">
+                <a href="https://vm.tiktok.com/ZGegSfcEE/" target="_blank">Zum Video</a>
+            </div>
+        </div>
+        <div id="contact" class="contact" role="region" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">collab</h2>
+            <p> -> <a href="mailto:gxlcicek@gmail.com">gxlcicek@gmail.com</a></p>
+        </div>
+        <div class="social-media">
+            <a href="https://www.tiktok.com/@gxlcicek" target="_blank">TikTok</a>
+            <a href="https://www.instagram.com/dein_account" target="_blank">Instagram</a>
+        </div>
+        <div class="comments-section">
+            <h2>Kommentare</h2>
+            <div class="comments-list" id="comments-list">
+                <!-- Hier werden die Kommentare angezeigt -->
+            </div>
+            <form id="comment-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="comment">Kommentar:</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+                <button type="submit">Kommentar absenden</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Gülsüm (eure Lieblingshijabi). Alle Rechte vorbehalten.</p>
+    </footer>
+    <script>
+        function showContact() {
+            var contactSection = document.getElementById('contact');
+            contactSection.style.display = 'block';
+            contactSection.style.opacity = 0;
+            var opacity = 0;
+            var intervalID = setInterval(function() {
+                if (opacity >= 1) {
+                    clearInterval(intervalID);
+                }
+                contactSection.style.opacity = opacity;
+                opacity += 0.1;
+            }, 50);
+        }
+
+        function containsInappropriateWords(text) {
+            const inappropriateWords = ["badword1", "badword2", "badword3"]; // Fügen Sie hier unangemessene Wörter hinzu
+            for (let word of inappropriateWords) {
+                if (text.toLowerCase().includes(word.toLowerCase())) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function loadComments() {
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            const commentsList = document.getElementById('comments-list');
+            commentsList.innerHTML = '';
+            comments.forEach(comment => {
+                const commentHTML = '<div class="comment">' +
+                                    '<p class="comment-name">' + comment.name + '</p>' +
+                                    '<p class="comment-text">' + comment.text + '</p>' +
+                                    '<div class="like-dislike">' +
+                                    '<button class="like-btn">👍 <span class="like-count">' + comment.likes + '</span></button>' +
+                                    '<button class="dislike-btn">👎 <span class="dislike-count">' + comment.dislikes + '</span></button>' +
+                                    '</div>' +
+                                    '</div>';
+                commentsList.insertAdjacentHTML('beforeend', commentHTML);
+
+                // Event-Listener für Like/Dislike-Buttons hinzufügen
+                const newComment = commentsList.lastElementChild;
+                const likeBtn = newComment.querySelector('.like-btn');
+                const dislikeBtn = newComment.querySelector('.dislike-btn');
+
+                likeBtn.addEventListener('click', function() {
+                    const likeCount = this.querySelector('.like-count');
+                    likeCount.textContent = parseInt(likeCount.textContent) + 1;
+                    comment.likes = likeCount.textContent;
+                    saveComments(comments);
+                });
+
+                dislikeBtn.addEventListener('click', function() {
+                    const dislikeCount = this.querySelector('.dislike-count');
+                    dislikeCount.textContent = parseInt(dislikeCount.textContent) + 1;
+                    comment.dislikes = dislikeCount.textContent;
+                    saveComments(comments);
+                });
+            });
+        }
+
+        function saveComments(comments) {
+            localStorage.setItem('comments', JSON.stringify(comments));
+        }
+
+        document.getElementById('comment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Name und Kommentar aus dem Formular holen
+            var name = document.getElementById('name').value;
+            var commentText = document.getElementById('comment').value;
+
+            // Kommentar auf unangemessene Wörter überprüfen
+            if (containsInappropriateWords(commentText)) {
+                alert("Ihr Kommentar enthält unangemessene Wörter und wurde nicht veröffentlicht.");
+                return;
+            }
+
+            // Kommentar-Objekt erstellen
+            const comment = {
+                name: name,
+                text: commentText,
+                likes: 0,
+                dislikes: 0
+            };
+
+            // Kommentar zur Liste und Local Storage hinzufügen
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            comments.push(comment);
+            saveComments(comments);
+
+            // Kommentare laden und anzeigen
+            loadComments();
+
+            // Formular zurücksetzen
+            document.getElementById('comment-form').reset();
+        });
+
+        // Kommentare laden, wenn die Seite geladen wird
+        document.addEventListener('DOMContentLoaded', loadComments);
+    </script>
+</body>
+</html>
